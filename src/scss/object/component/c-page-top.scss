@@ -1,0 +1,29 @@
+@use 'foundation' as *;
+
+.c-page-top {
+    padding-top: prem(15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: prem(67);
+    height: prem(67);
+    font-size: prem(15);
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50%;
+    background-color: $c-orange;
+    cursor: pointer;
+}
+
+.c-page-top::before {
+    content: "";
+    position: absolute;
+    top: prem(20);
+    left: 50%;
+    width: prem(13);
+    height: prem(13);
+    border-top: prem(3) solid #fff;
+    border-right: prem(3) solid #fff;
+    transform: translateX(-50%) rotate(-45deg);
+}

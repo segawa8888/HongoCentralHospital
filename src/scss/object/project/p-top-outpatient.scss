@@ -1,0 +1,147 @@
+@use 'foundation' as *;
+
+.p-top-outpatient {
+    margin-top: prem(50);
+    background-color: $c-light-pink;
+    padding-top: prem(30);
+    padding-bottom: prem(30);
+    @include mq(md) {
+        padding-top: prem(38);
+        padding-bottom: prem(114);
+    }
+}
+
+.p-top-outpatient__swiper-container {
+    position: relative;
+}
+
+.p-top-outpatient__swiper {
+    margin-top: prem(20);
+    width: 100%;
+    max-width: calc(360/430*100vw);
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        max-width: 100%;
+        margin-top: prem(30);
+    }
+}
+
+.p-top-outpatient__card {
+    width: 100%;
+    height:prem(158.05);
+    background-color: $c-orange;
+    padding-top: prem(26.34);
+    border-radius: prem(4.39);
+    position: relative;
+    @include mq(md) {
+        height:prem(200);
+        border-radius: prem(5);
+        padding-top: prem(27);
+        padding-left: prem(28);
+        padding-right: prem(28);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom:prem(14.93);
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../images/icon/icon_arrow_right_transparent.png);
+        background-size: contain;
+        background-repeat: no-repeat;   
+        width:prem(13.17);
+        height: prem(13.17);
+        @include mq(md) {
+            bottom:prem(15);
+            width:prem(30);
+            height:prem(30);
+        }
+    }
+}
+
+.p-top-outpatient__card:nth-child(even) {
+    background-color:$c-pink;
+}
+
+.p-top-outpatient__card-icon img {
+    max-width: prem(41);
+    width: 100%;
+    height:prem(41);
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    @include mq(md) {
+        max-width: prem(50);
+        height:prem(50);
+    }
+}
+
+.p-top-outpatient__card-title {
+    margin-top: prem(13.17);
+    text-align: center;
+    color: $c-white;
+    font-weight: $medium;
+    font-size: prem(15.8);
+    line-height: calc(21.1/15.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:prem(43);
+    span {
+        font-size: prem(12.29);
+        @include mq(md) {
+            font-size: prem(18);
+        }
+    }
+    @include mq(md) {
+        margin-top: prem(10);
+        font-size: prem(24);
+        line-height: calc(28/24);
+        height:prem(56);
+    }
+}
+
+.p-top-outpatient__title {
+    text-align: center;
+    font-size: prem(20);
+    font-weight: $medium;
+    letter-spacing: 0.01em;
+    color: $c-orange;
+    @include mq(md) {
+        font-size: prem(32);
+    }
+}
+
+.p-top-outpatient__text {
+    text-align: center;
+    font-size: prem(14);
+    font-weight: $medium;
+    letter-spacing: 0.02em;
+    margin-top: prem(5);
+    @include mq(md) {
+        font-size: prem(20);
+    }
+}
+
+.p-top-outpatient__card-arrow {
+    width:prem(10);
+}
+
+.p-top-outpatient__card-arrow-prev {
+    left:0;
+    @include mq(md) {
+        left:prem(-33);
+    }
+}
+
+.p-top-outpatient__card-arrow-next {
+    right:0;
+    @include mq(md) {
+        right:prem(-33);
+    }
+}
+
+.p-top-outpatient__btn {
+    margin-top: prem(30);
+}

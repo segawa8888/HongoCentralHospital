@@ -1,0 +1,15 @@
+@use 'foundation' as *;
+
+/*********************************************
+align-items
+**********************************************/
+
+$align-items: (flex-start, flex-end, center, baseline, stretch);
+@each $value in $align-items {
+    .u-align-items-#{$value} {
+        align-items: $value;
+    }
+    .u-place-items-#{$value} {
+        place-items: center;
+    }
+}

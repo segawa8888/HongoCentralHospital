@@ -1,0 +1,62 @@
+@use 'foundation' as *;
+
+.p-footer-nav-lists {
+    @include mq(md) {
+        max-width: $inner;
+        padding-left: $padding-pc;
+        padding-right: $padding-pc;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.p-footer-nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include mq(md) {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+}
+
+.p-footer-nav-list .menu-item {
+    width: 50%;
+    border-bottom: solid prem(1) #E3E3E3;
+    height: prem(60);
+    border-left: solid prem(1) #E3E3E3;
+    @include mq(md) {
+        width: calc(100% / 5);
+        border-bottom:initial;
+    }
+
+    &:last-child {
+        border-right: solid prem(1) #E3E3E3;
+        border-bottom:initial;
+        @include mq(md) {
+            border-right:initial;
+        }
+    }
+}
+
+.p-footer-nav-list .menu-item > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    font-size: prem(16);
+    letter-spacing: 0.01em;
+    font-weight: $medium;
+    color: $c-orange;
+    transition: all  0.3s ease;
+    @include mq(md) {
+        font-size: prem(18);
+    }
+    &:hover {
+        background-color: $c-orange;
+        color: $c-white;
+    }
+}
+

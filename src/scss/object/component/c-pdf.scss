@@ -1,0 +1,57 @@
+@use 'foundation' as *;
+
+.c-pdf {
+    display: block;
+    font-size: prem(16);
+    font-weight: $medium;
+    padding-left: prem(37);
+    position: relative;
+    &::before {
+        content: '';
+        width:prem(19.38);
+        height:prem(20);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-image: url(../images/icon/icon_pdf_bk.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.c-pdf--orange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: prem(20);
+    @include mq(md) {
+        max-width: prem(590);
+        width: 100%;
+    }
+
+    .wp-block-button__link {
+        padding: calc(15/430*100vw) calc(35/430*100vw) calc(10/430*100vw) calc(61/430*100vw);
+        position: relative;
+        font-size: clamp(0px, calc(16/430*100vw), 18px);
+        @include mq(md) {
+            padding: prem(15) prem(35) prem(10) prem(61);
+            font-size: prem(16);
+        }
+        &::before {
+            content: '';
+            width:prem(19.38);
+            height:prem(20);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: calc(27/430*100vw);
+            background-image: url(../images/icon/icon_pdf_orange.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include mq(md) {
+                left: prem(67);
+            }
+        }
+    }
+}

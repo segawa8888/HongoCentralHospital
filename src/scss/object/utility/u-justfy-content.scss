@@ -1,0 +1,22 @@
+@use 'foundation' as *;
+
+/*********************************************
+justify-content
+**********************************************/
+
+$justify-content: (flex-start, flex-end, center, space-between, space-around, space-evenly);
+@each $value in $justify-content {
+    @media screen and (max-width:768px) {
+        .sm\:u-justify-#{$value} {
+            justify-content: $value;
+        }
+    }
+    @include mq(md) {
+        .u-justify-#{$value} {
+            justify-content: $value;
+        }
+    }
+    .justify-#{$value} {
+        justify-content: $value;
+    }
+}

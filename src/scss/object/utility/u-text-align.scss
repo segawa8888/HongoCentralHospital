@@ -1,0 +1,37 @@
+@use 'foundation' as *;
+
+  .u-text-right {
+    text-align: right;
+  }
+  .u-text-left {
+    text-align: left;
+  }
+  .u-text-center {
+    text-align: center;
+  }
+
+  @media screen and (max-width:768px) {
+
+    .sm\:u-text-right {
+      text-align: right;
+    }
+    .sm\:u-text-left {
+      text-align: left;
+    }
+    .sm\:u-text-center {
+      text-align: center;
+    }
+
+}
+
+@include mq(md) {
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-center {
+    text-align: center;
+  }
+}

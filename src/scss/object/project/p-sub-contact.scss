@@ -1,0 +1,180 @@
+@use 'foundation' as *;
+
+.p-sub-contact {
+    margin-top: prem(75);
+    @include mq(md) {
+        margin-top: prem(180);
+    }
+}
+
+.p-sub-contact__inner {
+    padding-left: prem(10);
+    padding-right: prem(10);
+    @include mq(md) {
+        max-width: prem(1040);
+        padding-left: prem(20);
+        padding-right: prem(20);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.p-sub-contact__title {
+    font-size: prem(20);
+    text-align: center;
+    font-weight: $medium;
+    color: $c-orange;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        font-size: prem(32);
+    }
+}
+
+.p-sub-contact__read {
+    margin-top: prem(30);
+    strong {
+        display: block;
+        text-align: center;
+        color: $c-white;
+        background-color: $c-orange;
+        padding: prem(4);
+        font-size: prem(14);
+        font-weight: $medium;
+        @include mq(md) {
+            font-size: prem(20);
+        }
+    }
+    p {
+        padding: prem(15) prem(15) prem(17) prem(15);
+        font-size: prem(14);
+        line-height: calc(30/14);
+        font-weight: $medium;
+        border-left: prem(1) solid $c-gray;
+        border-right: prem(1) solid $c-gray;
+        border-bottom: prem(1) solid $c-gray;
+    }
+}
+
+.p-sub-contact-form-stepbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    margin-top: prem(30);
+    @include mq(md) {
+        max-width: prem(590);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: prem(32);
+    }
+}
+
+.p-sub-contact-form-stepbar .p-sub-contact-form-stepbar__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 31.01707317073%;
+    height: prem(34.75);
+    font-size: prem(14);
+    line-height: 1;
+    background-color: #FFEDE9;
+    z-index: 1;
+    color: #969696;
+    @include mq(md) {
+        height: prem(50);
+        font-size: prem(20);
+    }
+
+    &.-current {
+        background-color: $c-orange;
+        color: $c-white;
+        position: relative;
+    }
+}
+
+.p-sub-contact-form-stepbar .p-sub-contact-form-stepbar__item.-current {
+    &::before {
+        content: '';
+        width:prem(19);
+        height: prem(19);
+        background-image: url(../images/icon/icon_triangle_right_orange.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: prem(-18);
+        @include mq(md) {
+            width: prem(27);
+            height: prem(27);
+            right: prem(-26);
+        }
+    }
+    
+}
+
+.p-sub-contact-form__text {
+    margin-top: prem(20.85);
+    text-align: center;
+    font-size: prem(14);
+    font-weight: $medium;
+    @include mq(md) {
+        font-size: prem(20);
+        margin-top: prem(30);
+    }
+    .-require {
+        font-size: prem(12);
+        padding: prem(1) prem(9);
+        background-color: $c-orange;
+        color: $c-white;
+        margin-right: prem(6);
+        @include mq(md) {
+            font-size: prem(18);
+            padding: prem(2) prem(13);
+        }
+    }
+}
+
+.p-sub-contact__complete {
+    margin-top: prem(30.25);
+    padding-top: prem(40);
+    font-size: prem(16);
+    text-align: center;
+    font-weight: $medium;
+    letter-spacing: 0.01em;
+    border-top: prem(1) solid $c-gray;
+    @include mq(md) {
+        margin-top: prem(50);
+        padding-top: prem(53);
+        font-size: prem(20);
+    }
+}
+
+.p-sub-contact__success {
+    border-radius: prem(5);
+    background-color: #E3E3E3;
+    font-size: prem(16);
+    background-image: url(../images/icon/icon_arrow_left_transparent.png);
+    background-size: prem(20);
+    background-position: center left 10.3571428571%;
+    background-repeat: no-repeat;
+    font-weight: $medium;
+    height: prem(36);
+    margin-top: prem(81);
+    max-width: prem(280);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(md) {
+        max-width: prem(290);
+        height: prem(60);
+        margin-top: prem(120);
+        font-size: prem(18);
+    }
+}

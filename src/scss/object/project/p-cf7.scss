@@ -1,0 +1,450 @@
+@use 'foundation' as *;
+
+/******************************/
+/** コンタクトフォームの装飾 **/
+/******************************/
+
+.p-cf7-area {
+    width:100%;
+    margin-top: prem(30.41);
+    padding-top: prem(28);
+    border-top: prem(1) solid $c-gray;
+    @include mq(md) {
+        margin-top: prem(29);
+        padding-top: prem(54);
+    }
+}
+
+.p-cf7-confirm-area .p-cf7-r {
+    width: 100%;
+    font-size: prem(14);
+    letter-spacing: 0.04em;
+    font-weight: $medium;
+    @include mq(md) {
+        max-width: prem(636);
+        font-size: prem(16);
+    }
+}
+
+.p-cf7-item {
+    width: 100%;
+    @include mq(md) {
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.p-cf7-item:first-child {
+    @include mq(md) {
+        align-items: flex-start;
+    }
+}
+
+.p-cf7-item:nth-child(n+2) {
+    margin-top: prem(30);
+}
+
+.p-cf7-area label {
+    display: block;
+    font-size: prem(18);
+    font-weight: $medium;
+    @include mq(md) {
+        font-size: prem(16);
+        min-width: prem(175);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.p-cf7-q {
+    width: 100%;
+    @include mq(md) {
+        max-width: prem(302);
+    }
+}
+
+.wpcf7-list-item {
+    margin: 0;
+}
+
+.wpcf7-form-control-wrap {
+    margin-top: prem(13);
+    display: block;
+    @include mq(md) {
+        max-width: prem(636);
+        width: 100%;
+        margin-top: initial;
+    }
+}
+
+.p-cf7-area input {
+    display: block;
+    width: 100%;
+    padding:prem(20);
+    border-radius: prem(5);
+    font-size: prem(14);
+    color:$c-black;
+    border: none;
+    background-color: #F1F1F1;
+    @include mq(md) {
+        padding: prem(16) prem(24);
+        font-size: prem(16);
+    }
+}
+
+.p-cf7-area textarea {
+    display: block;
+    width: 100%;
+    padding:prem(20);
+    border-radius:prem(12);
+    font-size: prem(14);
+    color:$c-black;
+    border: none;
+    background-color: #F1F1F1;
+    @include mq(md) {
+        padding: prem(27) prem(24);
+        font-size: prem(14);
+        border-radius: prem(12);
+    }
+    &::placeholder {
+        font-size: prem(14);
+        color:#B4B4B4;
+        @include mq(md) {
+            font-size: prem(14);
+        }
+    }
+}
+
+.p-cf7-textarea {
+    @include mq(md) {
+        align-items: flex-start;
+    }
+
+    .p-cf7-q {
+        @include mq(md) {
+            padding-top: prem(17);
+        }
+    }
+}
+
+.wpcf7-radio input[type=”checkbox”],
+.wpcf7-radio input[type=”radio”]{
+    appearance: none;
+    display: inline-block;
+}
+
+.p-cf7-area .wpp-cf7-list-item {
+    display: block;
+}
+
+.p-cf7-comment {
+    font-size: prem(14);
+    letter-spacing: 0.01em;
+    display: block;
+    margin-top: prem(10);
+    @include mq(md) {
+        font-size: prem(16);
+        max-width: prem(636);
+        margin-left: auto;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.wpcf7-radio {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .wpcf7-list-item {
+            width: 100%;
+    }
+}
+
+.wpcf7-radio label {
+    display: flex;
+    align-items: center;
+    gap: prem(15);
+    padding-left: prem(10);
+    cursor: pointer;
+    @include mq(md) {
+        justify-content: left;
+    }
+
+    input[type="radio"] {
+        appearance: none;
+        position: relative;
+        width: prem(15);
+        height: prem(15);
+        padding: 0;
+        border: prem(2) solid #B1B1B1;
+        border-radius: 50%;
+        vertical-align: -2px;
+        background-color: $c-white;
+      }
+      
+      input[type="radio"]:checked:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: prem(9);
+        height: prem(9);
+        border-radius: 50%;
+        background: $c-orange;
+        content: '';
+      }
+
+    span {
+        font-size: prem(16);
+        @include mq(md) {
+            font-size: prem(18);
+        }
+    }
+}
+
+.wpcf7-radio .wpcf7-list-item + .wpcf7-list-item {
+    margin-top: prem(15);
+}
+
+.p-cf7-req {
+    font-size:prem(14);
+    font-weight: $bold;
+    padding: prem(1) prem(11);
+    background: $c-orange;
+    color: $c-white;
+    display:inline-block;
+    margin-left: prem(20);
+    @include mq(md) {
+        font-size: prem(12);
+        padding: prem(1) prem(13);
+        margin-left: initial; 
+    }
+}
+
+// .p-cf7-any {
+//     font-size:prem(12);
+//     font-weight: $bold;
+//     padding: prem(2) prem(8) prem(3) prem(8);
+//     background: $c-white;
+//     border:prem(1) solid #D10000;
+//     border-radius: prem(120);
+//     color: #D10000;
+//     display:inline-block;
+//     margin-right: prem(10);
+//     @include mq(md) {
+//         font-size: prem(12);
+//         padding: prem(2) prem(8) prem(3) prem(8);
+//         border-radius: prem(120);
+//         margin-right: prem(10);
+//         border:prem(1) solid #D10000;
+//     }
+// }
+
+.p-cf7-privacy {
+    margin-top: prem(30);
+    @include mq(md) {
+        margin-top: prem(34);
+    }
+}
+
+.p-cf7-privacy__title {
+    background-color: #B1B1B1;
+    font-size: prem(14);
+    font-weight: $medium;
+    text-align: center;
+    padding: prem(4);
+    color: $c-white;
+    @include mq(md) {
+        font-size: prem(20);
+    }
+}
+
+.p-cf7-privacy__box {
+    height: 100%;
+    padding:prem(10) prem(13) prem(8) prem(13);
+    background-color: $c-white;
+    border-left: prem(1) solid #D9D9D9;
+    border-bottom: prem(1) solid #D9D9D9;
+    border-right: prem(1) solid #D9D9D9;
+    @include mq(md) {
+        width: 100%;
+        padding:prem(16) prem(42) prem(32) prem(42);
+        border-radius: prem(12);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.p-cf7-privacy__box p {
+    font-size: prem(14);
+    line-height: calc(28/14);
+    letter-spacing: 0.01em;
+    font-weight: $medium;
+    max-height: prem(181);
+    height: 100%;
+    overflow-y: scroll;
+    @include mq(md) {
+        font-size: prem(14);
+        line-height: calc(24/14);
+        max-height: prem(202);
+    }
+}
+
+.p-cf7-accept-check {
+    margin-top: prem(30);
+    text-align: center;
+    @include mq(md) {
+        margin-top: prem(80);
+    }
+}
+
+.p-cf7-accept-check .wpcf7-form-control-wrap {
+    @include mq(md) {
+        max-width: prem(759);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.wpcf7-acceptance .wpcf7-list-item {
+    width: 100%;
+}
+
+.wpcf7-acceptance span {
+    cursor: pointer;
+}
+
+.wpcf7-acceptance .wpcf7-list-item label {
+    display: flex;
+    justify-content: space-between;
+    font-size: prem(14);
+    @include mq(md) {
+        font-size: prem(16);
+        justify-content: center;
+        gap: prem(30);
+    }
+}
+
+.wpcf7-acceptance .wpcf7-list-item label input {
+    display: inline-block;
+    width:prem(20);
+    height:prem(20);
+    border-radius: prem(5);
+    position: relative;
+    appearance: none;
+    padding: 0;
+    background-color: #D9D9D9;
+    @include mq(md) {
+        width:prem(30);
+        height: prem(30);
+    }
+
+    &:checked:before {
+        content:'';
+        width:prem(13);
+        height: prem(13);
+        border-radius: none;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-image: url(../images/icon/icon_check_orange.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include mq(md) {
+            width:prem(20);
+            height: prem(20);
+        }
+    }
+}
+
+.wpcf7-acceptance span.wpcf7-list-item-label {
+    max-width: 87.8048780488%;
+    width: 100%;
+    font-size: prem(14);
+    text-align: left;
+    @include mq(md) {
+        max-width: 100%;
+        font-size: prem(16);
+        cursor: pointer;
+    }
+}
+
+.p-cf7-btn {
+    margin-top: prem(30);
+    @include mq(md) {
+        margin-top: prem(60);
+    }
+}
+
+.p-cf7-btn__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: prem(10);
+    @include mq(md) {
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: prem(595);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: prem(20);
+    }
+}
+
+.p-cf7-area .wpcf7-previous {
+    border-radius: prem(5);
+    background-color: #E3E3E3;
+    font-size: prem(18);
+    background-image: url(../images/icon/icon_arrow_left_transparent.png);
+    background-size: prem(20);
+    background-position: center left 14.1%;
+    background-repeat: no-repeat;
+    font-weight: $medium;
+    height: prem(60);
+    cursor: pointer;
+}
+
+.p-cf7-area .wpcf7-submit {
+    border-radius: prem(5);
+    background-image: url(../images/icon/icon_arrow_right_transparent.png);
+    background-size: prem(20);
+    background-color: $c-orange;
+    background-position: center right 14.1%;
+    background-repeat: no-repeat;
+    height: prem(60);
+    font-size: prem(18);
+    color: $c-white;
+    cursor: pointer;
+    @include mq(md) {
+        letter-spacing: 0.03em;
+        max-width: prem(386);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.p-cf7-c {
+    width: 100%;
+    background-color: #EDEDED;
+    padding:prem(20);
+    border-radius: prem(12);
+    margin-top: prem(10);
+    border:prem(2) solid $c-white;
+    font-size: prem(14);
+    letter-spacing: 0.04em;
+    font-weight: $medium;
+    @include mq(md) {
+        max-width: prem(636);
+        padding:prem(27) prem(24);
+        border:prem(2) solid $c-white;
+        margin-top: initial;
+        font-size: prem(14);
+    }
+}

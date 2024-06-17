@@ -1,0 +1,35 @@
+@use 'foundation' as *;
+
+.p-sub-search__lists {
+    margin-top: prem(30);
+}
+
+.p-sub-search__list a {
+    display: block;
+    font-size: prem(14);
+    font-weight: $medium;
+    color: $c-orange;
+    position: relative;
+    padding-left: prem(30);
+    @include mq(md) {
+        font-size: prem(16);
+    }
+
+    &::before {
+        content: '';
+        width: prem(15);
+        height: prem(15);
+        background-image: url(../images/icon/icon_arrow_right_orange3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: prem(5);
+        z-index: 10;
+    }
+}
+
+.p-sub-search__list:nth-child(n+2) {
+    margin-top: prem(20);
+}

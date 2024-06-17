@@ -1,0 +1,70 @@
+@use 'foundation' as *;
+
+.p-top-recruit {
+    margin-top: prem(80);
+    background-color: $c-light-pink;
+    padding-top: prem(30);
+    padding-bottom: prem(30);
+    @include mq(md) {
+        margin-top: prem(136);
+    }
+}
+
+.p-top-recruit__content {
+    @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.p-top-recruit__title {
+    font-size: prem(20);
+    font-weight: $medium;
+    border-bottom: prem(2) solid $c-orange;
+    padding-bottom: prem(5);
+    max-width: prem(90.21);
+    width: 100%;
+    color: $c-orange;
+    @include mq(md) {
+        font-size: prem(32);
+        border-bottom: prem(3) solid $c-orange;
+        padding-bottom: prem(8);
+        max-width: prem(380);
+    }
+}
+
+.p-top-recruit__banner {
+    margin-top: prem(20);
+    @include mq(md) {
+        margin-top: initial;
+        max-width: prem(645);
+        width: 100%;
+    }
+}
+
+.p-top-recruit__banner-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:prem(12.28);
+    background-color: $c-orange;
+    padding: prem(5);
+    text-align: center;
+    color: $c-white;
+    font-size: prem(14.7);
+    @include mq(md) {
+        font-size: prem(24);
+        padding:prem(8);
+        gap:prem(20);
+    }
+}
+
+.p-top-recruit__banner-icon {
+    max-width: prem(12.28);
+    width: 100%;
+    @include mq(md) {
+        max-width: prem(20);
+    }
+}
+

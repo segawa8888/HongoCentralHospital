@@ -1,0 +1,160 @@
+@use 'foundation' as *;
+
+.p-top-menu {
+    margin-top: prem(30);
+    @include mq(md) {
+        margin-top: prem(-50);
+        background-color: $c-light-pink;
+        padding-bottom: prem(40);
+    }
+}
+
+.p-top-menu__inner {
+    @include mq(md) {
+
+    }
+}
+
+.p-top-menu__contents {
+    @include mq(md) {
+        display: flex;
+        align-items: flex-start;
+        gap:prem(20);
+    }
+}
+
+.p-top-menu__content {
+    @include mq(md) {
+        background-color: $c-white;
+        z-index: 10;
+        padding:prem(17) prem(21) prem(18) prem(21);
+        border-radius: prem(10);
+        max-width: prem(455);
+        width: 100%;
+    }
+}
+
+.p-top-menu__content:last-child {
+    @include mq(md) {
+        padding:prem(15) prem(30) prem(20) prem(30);
+        max-width: prem(645);
+    }
+}
+
+.p-top-menu__lists {
+    padding-left: prem(5);
+    padding-right: prem(5);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: prem(10.26);
+    row-gap: prem(10.61);
+    @include mq(md) {
+        padding-left: initial;
+        padding-right: initial;
+        column-gap: prem(13);
+        row-gap: prem(15);
+    }
+}
+
+.p-top-menu__list {
+    background-color: $c-pink;
+    border-radius: prem(5);
+    transition: all  0.3s ease;
+    max-width: 48.5%;
+    width: 100%;
+    height: prem(102.56);
+    @include mq(md) {
+        max-width: 48.2%;
+        height: prem(100);
+    }
+}
+
+.p-top-menu__list:hover {
+    background-color: $c-orange;
+}
+
+.p-top-menu__list:nth-child(2),
+.p-top-menu__list:nth-child(3) {
+    background-color: $c-orange;
+
+    &:hover {
+        background-color: $c-pink; 
+    }
+}
+
+.p-top-menu__list a {
+    padding:prem(21) prem(11.87) prem(21.56) prem(17);
+    display: flex;
+    align-items: center;
+    gap:prem(8);
+    height: 100%;
+    @include mq(md) {
+        padding:prem(25) prem(6) prem(21) prem(12);
+        gap:prem(7);
+    }
+}
+
+.p-top-menu__list:last-child {
+    background-color: $c-white;
+    border: prem(3) solid $c-orange;
+    border-radius: prem(5);
+    max-width: 100%;
+    width: 100%;
+
+    a {
+        padding: prem(23) prem(19) prem(26) prem(24);
+        font-size: prem(16);
+        gap: prem(20);
+        @include mq(md) {
+            padding: prem(16) prem(13) prem(19);
+            gap: prem(8);
+        }
+
+        .p-top-menu__list-icon {
+            max-width: prem(35);
+            width: 100%;
+            @include mq(md) {
+                max-width: prem(45);
+            }
+        }
+
+        .p-top-menu__list-title {
+            color: $c-orange;
+            font-size: prem(16);
+            @include mq(md) {
+                font-size: prem(18);
+            }
+        }
+    }
+}
+
+.p-top-menu__list-icon {
+    max-width: prem(46.15);
+    width: 100%;
+}
+
+.p-top-menu__list-title {
+    font-size: prem(16);
+    line-height: calc(24/16);
+    font-weight: $medium;
+    color: $c-white;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        font-size: prem(18);
+        line-height: calc(24/18);
+    }
+}
+
+.p-top-menu__calender-title {
+    margin-top: prem(40.44);
+    text-align: center;
+    font-size: prem(20);
+    font-weight: $medium;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        margin-top: initial;
+        text-align: left;
+        font-size: prem(20);
+    }
+}

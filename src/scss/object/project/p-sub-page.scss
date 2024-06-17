@@ -1,0 +1,392 @@
+@use 'foundation' as *;
+
+.p-sub-page {
+    @include mq(md) {
+        display: flex;
+    }
+}
+
+.p-sub-page__left {
+    width: 100%;
+    @include mq(md) {
+        max-width: calc(427/1280*100vw);
+    }
+}
+
+.p-sub-page__right {
+    width: 100%;
+    @include mq(md) {
+        max-width: calc(853/1280*100vw);
+    }
+}
+
+.p-sub-page__thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.p-sub-page__content {
+    margin-top: prem(20);
+    padding-left: prem(10);
+    padding-right: prem(10);
+    @include mq(md) {
+        margin-top: prem(36);
+        padding-right: prem(40);
+    }
+}
+
+.p-sub-page__content .no_bullets {
+    margin-bottom: prem(20);
+}
+
+.p-sub-page__content .toc_list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: prem(4.5);
+    row-gap: prem(10);
+    @include mq(md) {
+        column-gap: prem(17);
+    }
+
+    li {
+        font-size: clamp(0px, calc(12/430*100vw), 12px);
+        line-height: 1.16;
+        color: $c-blue;
+        text-align: center;
+        padding-left: prem(10);
+        padding-right: prem(10);
+        background-color: $c-light-pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: prem(76);
+        padding-bottom: prem(14);
+        border-radius: prem(5);
+        font-weight: $medium;
+        @include mq(md) {
+            height: prem(100);
+            font-size: prem(14);
+            padding-left: prem(16);
+            padding-right: prem(16);
+            padding-bottom: prem(23);
+            line-height: calc(20/14);
+        }
+        &::after {
+            content: '';
+            width: prem(10);
+            height: prem(6);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: prem(8);
+            background-image: url(../images/icon/icon_angle_down_blue.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include mq(md) {
+                width: prem(16);
+                height: prem(10);
+                bottom: prem(11);
+            }
+        }
+    }
+}
+
+.p-sub-page__content h2.wp-block-heading {
+    font-size: prem(20);
+    font-weight: $medium;
+    color: $c-white;
+    background-color: $c-orange;
+    padding: prem(10) prem(15);
+    letter-spacing: 0.01em;
+
+    &:first-of-type {
+        margin-top: prem(20)
+    }
+
+    &:nth-of-type(n+2) {
+        margin-top: prem(40);
+    }
+
+    @include mq(md) {
+        font-size: prem(28);
+        padding: prem(11) prem(20);
+    }
+}
+
+.p-sub-page__content h3.wp-block-heading {
+    font-size: prem(18);
+    font-weight: $medium;
+    border-bottom: prem(2) solid $c-orange;
+    padding-bottom: prem(10);
+    margin-top: prem(15);
+    @include mq(md) {
+        font-size: prem(20);
+        margin-top: prem(30);
+        border-bottom: prem(3) solid $c-orange;
+    }
+}
+
+.p-sub-page__content h4.wp-block-heading {
+    font-size: prem(20);
+    color: $c-orange;
+    margin-top: prem(20);
+    font-weight: $medium;
+    background-color: $c-light-pink;
+    padding:prem(15);
+    border-radius: prem(5);
+    @include mq(md) {
+        padding: prem(23) prem(26);
+        border-radius: prem(10);
+        color: $c-black;
+    }
+}
+
+.p-sub-page__content h5.wp-block-heading {
+    font-size: prem(20);
+    color: $c-black;
+    margin-top: prem(20);
+    font-weight: $medium;
+    background-color: $c-light-pink;
+    padding: prem(10);
+    @include mq(md) {
+        margin-top: prem(30);
+        padding:prem(10) prem(22);
+    }
+}
+
+.p-sub-page__content .wp-block-image {
+    margin-top: prem(20);
+    @include mq(md) {
+        margin-top: prem(30);
+    }
+}
+
+.p-sub-page__content h4,h5,h6,p:not([class]) {
+    @include mq(md) {
+        padding-left: prem(20);
+    }
+}
+
+.p-sub-page__content .c-pdf {
+    margin-top: prem(20);
+}
+
+.p-sub-page__content ol {
+    list-style: decimal;
+    margin-top: prem(20);
+}
+
+.p-sub-page__content
+.wp-block-flexible-table-block-table {
+    span {
+        font-size: prem(12);
+    }
+}
+
+:where(.is-layout-flex) {
+    gap: prem(15);
+    margin-top: prem(20);
+    @include mq(md) {
+        gap: prem(30);
+        margin-top: prem(30);
+    }
+}
+
+:where(.wp-block-columns) {
+    margin-bottom: initial;
+}
+
+.p-sub-page__content p.has-medium-font-size {
+    font-size: prem(18);
+    margin-top: prem(20);
+}
+
+.p-sub-page__content p:not([class]) {
+    margin-top: prem(20);
+    line-height: calc(30/16);
+  }
+
+  .p-sub-page__table {
+    table {
+        border-spacing: 0;
+        border-color: initial;
+    }
+    thead {
+        border-bottom: initial;
+    }
+    td,th {
+        border: prem(1) solid #D9D9D9;
+        padding: prem(4) prem(6);
+        font-size: prem(14);
+        @include mq(md) {
+            font-size: prem(16);
+            padding: prem(14);
+        }
+    }
+    th {
+        background-color:#EDEDED;
+    }
+  }
+
+  .p-sub-page__content .wp-block-image img {
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        margin-left: initial;
+        margin-right: initial;
+    }
+  }
+
+  // 青色
+
+  .p-sub-page__content.-blue {
+    h2.wp-block-heading {
+        background-color: $c-blue;
+        color: $c-white;
+    }
+
+    h3.wp-block-heading {
+        border-bottom: prem(2) solid $c-blue;
+        @include mq(md) {
+            border-bottom: prem(3) solid $c-blue; 
+        }
+    }
+
+    h4.wp-block-heading {
+        color:$c-black;
+        background-color: $c-skyblue;
+    }
+
+    h5.wp-block-heading {
+        background-color: $c-skyblue;
+    }
+
+  }
+
+  .p-sub-page__referral {
+    margin-top: prem(20);
+    &:nth-child(n+2) {
+        margin-top: prem(50);
+    }
+  }
+
+  .p-sub-page__referral-content {
+    margin-top: prem(15);
+    @include mq(md) {
+        display: flex;
+        gap: prem(20);
+        padding: 0 prem(20);
+    }
+  }
+
+  .p-sub-page__referral-img {
+    max-width: prem(285);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        margin-left: initial;
+        margin-right: initial;
+        max-width: 37.01298701299%;
+    }
+  }
+
+  .p-sub-page__referral-wrap {
+    @include mq(md) {
+        max-width:60.9090909091%;
+        width: 100%;
+    }
+  }
+  
+  .p-sub-page__referral-title {
+    margin-top: prem(20);
+    background-color: $c-skyblue;
+    padding: prem(8) prem(21) prem(12) prem(21);
+    font-size: prem(20);
+    font-weight: $medium;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        margin-top: initial;
+        padding: prem(14) prem(21) prem(21) prem(21);
+        font-size: prem(24);
+    }
+    span {
+        font-size: prem(16);
+        display: block;
+        @include mq(md) {
+            font-size: prem(18);
+        }
+    }
+  }
+  
+  .p-sub-page__referral-comment {
+    margin-top: prem(15);
+    font-size: prem(16);
+    line-height: calc(30/16);
+    letter-spacing: 0.01em;
+    padding-bottom: prem(20);
+    border-bottom: prem(1) solid $c-gray;
+    @include mq(md) {
+        margin-top: prem(24);
+        padding-left: prem(20);
+    }
+  }
+  
+  .p-sub-page__referral-special {
+    font-size: prem(16);
+    line-height: calc(30/16);
+    letter-spacing: 0.01em;
+    padding-bottom: prem(20);
+    border-bottom: prem(1) solid $c-gray;
+    white-space: pre-line;
+    @include mq(md) {
+        padding-left: prem(20);
+        padding-bottom: prem(25);
+    }
+    span {
+        font-size: prem(18);
+    }
+  }
+  
+  .p-sub-page__referral-qualifications {
+    font-size: prem(16);
+    line-height: calc(30/16);
+    letter-spacing: 0.01em;
+    padding-bottom: prem(20);
+    border-bottom: prem(1) solid $c-gray;
+    white-space: pre-line;
+    @include mq(md) {
+        padding-left: prem(20);
+        padding-bottom: prem(25);
+    }
+    span {
+        font-size: prem(18);
+    }
+  }
+  
+  .p-sub-page__content {
+
+    .wp-block-button {
+        &.c-pdf {
+            padding-left: initial;
+            a {
+                padding-left: prem(55);
+            }
+            &::before {
+                left: prem(21);
+            }
+        }
+        &.c-link {
+            padding-left: initial;
+            a {
+                padding-left: prem(55);
+            }
+            &::before {
+                left: prem(21);
+            }
+        }
+    }
+
+  }

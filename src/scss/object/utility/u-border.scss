@@ -1,0 +1,25 @@
+@use 'foundation' as *;
+
+/*----------------------------------
+border    
+-----------------------------------*/
+
+.u-border {
+    border-width: prem(1);
+    border-style: solid;
+  }
+  .u-border-left {
+    border-left: prem(1) solid;
+  }
+  .u-border-0 {
+    border-width: 0px;
+  }
+  .u-border-2 {
+    border-width: prem(2);
+    border-style: solid;
+  }
+
+  .u-border-bottom-pink span {
+    text-decoration: none!important;
+    border-bottom: prem(3) solid $c-light-pink;
+  }

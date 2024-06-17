@@ -1,0 +1,43 @@
+@use 'foundation' as *;
+
+.c-side-menu {
+    display: none;
+    @include mq(md) {
+        width: 100%;
+        padding:prem(30) prem(37) prem(30) prem(40);
+        display: block;
+    }
+}
+
+.c-side-menu__label {
+    text-align: center;
+    background-color: #EDEDED;
+    padding:prem(12);
+}
+
+.c-side-menu
+.menu-item {
+    width: 100%;
+}
+
+.c-side-menu
+.menu-item > a, .menu-item-has-children > a {
+    border-left:none;
+    font-size: prem(16);
+    line-height: calc(24/16);
+    justify-content: left;
+    padding: prem(22) prem(29) prem(22) prem(18); 
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: prem(29);
+        width: prem(15);
+        height: prem(15);
+        background-image: url(../images/icon/icon_arrow_right_gray.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

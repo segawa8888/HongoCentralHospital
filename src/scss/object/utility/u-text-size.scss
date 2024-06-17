@@ -1,0 +1,29 @@
+@use 'foundation' as *;
+
+/*----------------------------------
+text-size
+-----------------------------------*/
+
+.u-text-xl {
+    font-size: prem(18);
+    font-weight: $bold;
+    line-height: 1.6;
+  }
+
+.u-text-lg {
+    font-size: prem(16);
+    font-weight: $bold;
+    line-height: 1.6;
+  }
+  .u-text-md {
+    font-size: prem(14);
+    line-height: 1.6;
+  }
+  .u-text-sm {
+    font-size: prem(12);
+    line-height: 1.6;
+  }
+  .u-text-xs {
+    font-size: prem(10);
+    line-height: 1.6;
+  }

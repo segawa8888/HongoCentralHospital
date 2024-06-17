@@ -1,0 +1,39 @@
+@use 'foundation' as *;
+
+.c-link {
+    margin-top: prem(20);
+    display: block;
+    font-size: prem(16);
+    font-weight: $medium;
+    padding-left: prem(37);
+    position: relative;
+    &::before {
+        content: '';
+        width:prem(20);
+        height:prem(20);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-image: url(../images/icon/icon_external.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &.-orange {
+        &::before {
+            left: prem(37);
+            background-image: url(../images/icon/icon_external_orange.png);
+        }
+        padding-left:initial;
+        a {
+            padding-left: prem(68);
+        }
+    }
+
+    &.-gray {
+        &::before {
+            background-image: url(../images/icon/icon_external_gray.png);
+        }
+    }
+}

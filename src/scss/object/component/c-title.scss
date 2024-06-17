@@ -1,0 +1,42 @@
+@use 'foundation' as *;
+
+.c-title {
+    font-size: prem(20);
+    padding-bottom: prem(10);
+    font-weight: $medium;
+    letter-spacing: 0.01em;
+    position: relative;
+    @include mq(md) {
+        font-size: prem(32);
+        padding-bottom: prem(8);
+    }
+
+    &.-info {
+        padding-left: prem(30);
+        border-bottom: prem(3) solid $c-gray;
+        @include mq(md) {
+            padding-left: prem(45);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: prem(5);
+            left: 0;
+            background-image: url(../images/icon/icon_info_gray.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width:prem(20);
+            height:prem(20);
+            @include mq(md) {
+                width:prem(25);
+                height:prem(25);
+                top:prem(10);
+            }
+        }
+    }
+
+    &.-blue {
+        border-bottom: prem(3) solid $c-blue;
+    }
+}

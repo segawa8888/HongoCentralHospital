@@ -1,0 +1,21 @@
+@use 'foundation' as *;
+
+.p-top-slider {
+    margin-top: prem(50);
+    @include mq(md) {
+        margin-top: prem(59);
+    }
+}
+
+.p-top-slider
+.swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+.p-top-slider__swiper .swiper-img {
+    max-width: prem(160);
+    width: 100%;
+    @include mq(md) {
+        max-width: prem(256);
+    }
+}

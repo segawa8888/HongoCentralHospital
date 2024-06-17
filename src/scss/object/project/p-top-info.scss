@@ -1,0 +1,112 @@
+@use 'foundation' as *;
+
+.p-top-info {
+    margin-top: prem(70);
+    @include mq(md) {
+        margin-top: prem(40);
+    }
+}
+
+.p-top-info__lists {
+    margin-top: prem(16);
+    @include mq(md) {
+        margin-top: prem(30);
+        padding-left: prem(22);
+        padding-right: prem(28);
+    }
+}
+
+.p-top-info__list a {
+    display: flex;
+    gap:prem(17);
+    position: relative;
+    @include mq(md) {
+        gap:prem(27);
+    }
+}
+
+.p-top-info__list a:after {
+    content:'';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: prem(2);
+    width:prem(15);
+    height:prem(15);
+    background-image: url(../images/icon/icon_arrow_right_orange.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include mq(md) {
+        right:0;
+        width:prem(20);
+        height:prem(20);
+    }
+}
+
+.p-top-info__list:nth-child(n+2) {
+    margin-top: prem(16);
+}
+
+.p-top-info__list-wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: prem(80);
+    width: 100%;
+    @include mq(md) {
+        align-items: center;
+        flex-direction: row-reverse;
+        max-width: prem(278);
+        justify-content: space-between;
+    }
+}
+
+.p-top-info__list_category {
+    color: $c-white;
+    font-weight: $medium;
+    font-size: prem(12);
+    padding:prem(2) prem(15);
+    border-radius: prem(20);
+    background-color: $c-orange;
+    max-width: prem(80);
+    width: 100%;
+    min-height: prem(22);
+    text-align: center;
+    @include mq(md) {
+        padding:prem(2) prem(30);
+        font-size: prem(14);
+        letter-spacing: 0.01em;
+        line-height: 2;
+        max-width: prem(120);
+        width: 100%;
+        min-height: prem(28);
+    }
+}
+
+.p-top-info__list:nth-child(even) .p-top-info__list_category {
+    background-color: $c-pink;
+}
+
+.p-top-info__list-date {
+    font-weight: $medium;
+    font-size: prem(12);
+    text-align: center;
+    @include mq(md) {
+        text-align: left;
+        font-size: prem(20);
+    }
+}
+
+.p-top-info__list-title {
+    font-weight: $medium;
+    font-size: prem(14);
+    line-height: calc(20/14);
+    padding-right: prem(31);
+    @include mq(md) {
+        font-size: prem(20);
+        padding-right: prem(131);
+    }
+}
+
+.p-top-info__btn {
+    margin-top: prem(30);
+}

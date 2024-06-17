@@ -1,0 +1,13 @@
+@use 'foundation' as *;
+
+@include mq(md) {
+  .lg\:u-hidden {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .sm-min\:u-hidden {
+    display: none;
+  }
+}

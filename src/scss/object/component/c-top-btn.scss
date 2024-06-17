@@ -1,0 +1,25 @@
+@use 'foundation' as *;
+
+.c-top-btn {
+    border-radius: prem(5);
+    background-image: url(../images/icon/icon_arrow_right_transparent.png);
+    background-size: prem(20);
+    background-color: $c-orange;
+    background-position: center right 20px;
+    background-repeat: no-repeat;
+    height: prem(45);
+    font-size: prem(18);
+    color: $c-white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: prem(300);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        letter-spacing: 0.03em;
+        max-width: prem(386);
+    }
+}

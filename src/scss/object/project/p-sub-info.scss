@@ -1,0 +1,18 @@
+@use 'foundation' as *;
+
+.p-sub-info__date {
+    font-size: prem(18);
+    font-weight: $medium;
+}
+
+.p-sub-info__title {
+    font-size: prem(20);
+    line-height: calc(24/20);
+    color: $c-orange;
+    font-weight: $medium;
+    margin-top: prem(20);
+    @include mq(md) {
+        font-size: prem(30);
+        line-height: calc(34/30);
+    }
+}

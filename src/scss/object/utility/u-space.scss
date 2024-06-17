@@ -1,0 +1,120 @@
+@use 'foundation' as *;
+
+$space: (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32);
+
+.u-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@each $i in $space {
+
+    .sm\:u-m-#{$i} {
+        margin: prem($i * 4);
+      }
+      .sm\:u-mx-#{$i} {
+        margin-left: prem($i * 4);
+        margin-right: prem($i * 4);
+      }
+      .sm\:u-my-#{$i} {
+        margin-top: prem($i * 4);
+        margin-bottom: prem($i * 4);
+      }
+      .sm\:u-mt-#{$i} {
+        margin-top: prem($i * 4);
+      }
+      .sm\:u-mb-#{$i} {
+        margin-bottom: prem($i * 4);
+      }
+      .sm\:u-p-#{$i} {
+        padding: prem($i * 4);
+      }
+      .sm\:u-px-#{$i} {
+        padding-left: prem($i * 4);
+        padding-right: prem($i * 4);
+      }
+      .sm\:u-py-#{$i} {
+        padding-top: prem($i * 4);
+        padding-bottom: prem($i * 4);
+      }
+      .sm\:u-pt-#{$i} {
+        padding-top: prem($i * 4);
+      }
+      .sm\:u-pb-#{$i} {
+        padding-bottom: prem($i * 4);
+      }
+      .sm\:u-pl-#{$i} {
+        padding-left: prem($i * 4);
+      }
+      .sm\:u-pr-#{$i} {
+        padding-right: prem($i * 4);
+      }
+      .sm\:u-gap-#{$i} {
+        gap: prem($i * 4);
+      }
+      .sm\:u-gap-x-#{$i} {
+        column-gap: prem($i * 4);
+      }
+      .sm\:u-gap-y-#{$i} {
+        row-gap: prem($i * 4);
+      }
+
+    @include mq(md) {
+        .u-m-#{$i} {
+            margin: prem($i * 4);
+          }
+          .u-mx-#{$i} {
+            margin-left: prem($i * 4);
+            margin-right: prem($i * 4);
+          }
+          .u-my-#{$i} {
+            margin-top: prem($i * 4);
+            margin-bottom: prem($i * 4);
+          }
+          .u-mt-#{$i} {
+            margin-top: prem($i * 4);
+          }
+          .u-mb-#{$i} {
+            margin-bottom: prem($i * 4);
+          }
+          .u-ml-#{$i} {
+            margin-left: prem($i * 4);
+          }
+          .u-mr-#{$i} {
+            margin-right: prem($i * 4);
+          }
+          .u-p-#{$i} {
+            padding: prem($i * 4);
+          }
+          .u-px-#{$i} {
+            padding-left: prem($i * 4);
+            padding-right: prem($i * 4);
+          }
+          .u-py-#{$i} {
+            padding-top: prem($i * 4);
+            padding-bottom: prem($i * 4);
+          }
+          .u-pt-#{$i} {
+            padding-top: prem($i * 4);
+          }
+          .u-pb-#{$i} {
+            padding-bottom: prem($i * 4);
+          }
+          .u-pl-#{$i} {
+            padding-left: prem($i * 4);
+          }
+          .u-pr-#{$i} {
+            padding-right: prem($i * 4);
+          }
+          .u-gap-#{$i} {
+            gap: prem($i * 4);
+          }
+          .u-gap-x-#{$i} {
+            column-gap: prem($i * 4);
+          }
+          .u-gap-y-#{$i} {
+            row-gap: prem($i * 4);
+          }
+    }
+
+}

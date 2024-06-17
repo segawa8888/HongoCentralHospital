@@ -1,0 +1,19 @@
+@use 'foundation' as *;
+
+.c-btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: prem(16);
+  padding: prem(10) prem(20);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.c-btn:hover {
+  background-color: #0056b3;
+}

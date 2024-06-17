@@ -1,0 +1,160 @@
+@use 'foundation' as *;
+
+.c-time-table {
+    display: block;
+    width: 100%;
+}
+
+.c-time-table tbody {
+    display: block;
+    width: 100%;
+}
+
+.c-time-table tr {
+    display: flex;
+    width: 100%;
+
+    &:nth-child(n+2) {
+        margin-top: prem(5);
+        @include mq(md) {
+            margin-top: prem(10);
+        }
+    }
+}
+
+.c-time-table td {
+    max-width:87.8048780488%;
+    width: 100%;
+}
+
+.c-time-table tr:first-child .c-time-table__detail {
+    @include mq(md) {
+        padding:prem(6.5) 0;
+    }
+}
+
+.c-time-table tr:first-child td {
+    @include mq(md) {
+        max-width: 22.5641025641%;
+        font-size: prem(16);
+        padding:prem(6.5) 0;
+    }
+}
+
+.c-time-table__day {
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    border-top: prem(1) solid $c-deep-gray;
+    border-bottom: prem(1) solid $c-deep-gray;
+    border-right: prem(1) solid $c-deep-gray;
+}
+
+.c-time-table__day-lists {
+    display: flex;
+    width: 100%;
+}
+
+.c-time-table__day-lists li {
+    font-size: prem(16);
+    font-weight: $medium;
+    text-align: center;
+    width: 20%;
+    &:nth-child(n+2) {
+        border-left: prem(1) solid $c-deep-gray;
+    }
+
+    @include mq(md) {
+        max-width: 13.4575569358%;
+        width:100%;
+        padding:prem(7) prem(25) prem(5) prem(25);
+    }
+
+    &:last-child {
+        max-width: 18.8405797101%;
+        @include mq(md) {
+            max-width: 20%;
+        }
+    }
+}
+
+.c-time-table__day-lists:first-child li {
+    background-color: $c-light-gray;
+    padding:prem(5) 0 prem(7) 0;
+ }
+
+ .c-time-table__day-lists:last-child li {
+    font-weight: $bold;
+    font-family: $font-jp;
+    padding:prem(9) 0 prem(12) 0;
+ }
+
+.c-time-table .c-time-table__detail {
+    font-size: prem(16);
+    max-width: 12.1951219512%;
+    padding:prem(6) 0;
+    width: 100%;
+    background-color: $c-deep-gray;
+    color:$c-white;
+    font-weight: $medium;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(md){
+        font-size: prem(18);
+        max-width: 17.6068376068%;
+        padding:prem(26.5) 0;
+    }
+}
+
+.c-time-table__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: prem(1) solid $c-deep-gray;
+    border-bottom: prem(1) solid $c-deep-gray;
+    border-right: prem(1) solid $c-deep-gray;
+    font-size: prem(20);
+    text-align: center;
+}
+
+.c-time-table__time-lists {
+    display: flex;
+    max-width: 50%;
+    width: 100%;
+}
+
+.c-time-table__time-lists li {
+    font-weight: $medium;
+    border-left: prem(1) solid $c-deep-gray;
+
+    &:first-child {
+        max-width: 18.2320441989%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: prem(16);
+        background-color: $c-light-gray;
+        padding:prem(16) prem(8);
+        @include mq(md) {
+            max-width: prem(65);
+            padding:prem(29) 0 prem(27) 0;
+        }
+    }
+
+    &:last-child {
+        max-width: 81.7679558011%;
+        width: 100%;
+        font-size: prem(20);
+        text-align: center;
+        padding:prem(25) 0;
+        @include mq(md) {
+            max-width: prem(178);
+            padding:prem(29) 0 prem(27) 0;
+            
+        }
+    }
+}

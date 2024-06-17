@@ -1,0 +1,32 @@
+@use 'foundation' as *;
+
+.c-breadcrumbs {
+    margin-top: prem(80);
+    padding-left: prem(20);
+    margin-bottom: prem(20);
+    @include mq(md) {
+        padding-left: prem(40);
+        margin-bottom: prem(50);
+    }
+}
+
+.c-breadcrumbs span {
+    display: flex;
+    align-items: center;
+    gap:prem(10);
+    color: #969696;
+}
+
+.c-breadcrumbs a {
+    font-size: prem(16);
+    font-weight: $medium;
+    color: #969696;
+    letter-spacing: 0.03em;
+}
+
+.c-breadcrumbs strong {
+    font-size: prem(16);
+    font-weight: $medium;
+    color: #969696;    
+    letter-spacing: 0.03em;
+}

@@ -1,0 +1,118 @@
+@use 'foundation' as *;
+
+.p-footer-bottom {
+    flex-wrap: wrap;
+    padding: prem(30) prem(10) prem(20) prem(10);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    @include mq(md) {
+        padding:prem(31) prem(153) prem(25) prem(63);
+        flex-wrap: nowrap;
+        justify-content: left;
+        position: relative;
+    }
+}
+
+.p-footer-bottom__logo {
+    display: block;
+    max-width: prem(258);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        max-width: prem(258);
+        margin-left: initial;
+        margin-right: initial;
+    }
+}
+
+.p-footer-bottom__main {
+    width: 100%;
+    padding-top: prem(30);
+    @include mq(md) {
+        max-width: prem(470);
+        margin-left: prem(105);
+        padding-top: initial;
+    }
+}
+
+.p-footer-bottom__address {
+    text-align: center;
+    font-size: prem(14);
+    font-style: normal;
+    @include mq(md) {
+        text-align: left;
+        font-size: prem(16);
+    }
+}
+
+.p-footer-bottom__tel {
+
+}
+
+.p-footer-bottom-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: prem(20);
+    @include mq(md) {
+        justify-content: flex-start;
+    }
+}
+
+.p-footer-bottom-list__item {
+
+}
+
+.p-footer-bottom-list__link {
+    position: relative;
+    font-size: prem(14);
+    padding-left: prem(30);
+    &::before {
+        content: '';
+        width:prem(15);
+        height:prem(15);
+        background-image: url(../images/icon/icon_angle_right_gray.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }   
+}
+
+.p-footer-bottom__sns {
+    margin-top: prem(20);
+    @include mq(md) {
+        margin-top: initial;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: prem(156);
+    }
+}
+
+.p-footer-bottom__sns-icon {
+    max-width: prem(50);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    @include mq(md) {
+        max-width: prem(80);
+    }
+}
+
+.p-footer-bottom__sns-text {
+    margin-top: prem(5);
+    font-size: prem(14);
+    text-align: center;
+    color: $c-pink;
+    @include mq(md) {
+        margin-top: prem(3);
+    }
+}
+

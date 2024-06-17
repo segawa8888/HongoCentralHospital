@@ -1,0 +1,54 @@
+@use 'foundation' as *;
+
+/*********************************************
+display
+**********************************************/
+
+$display: (block, inline-block, inline, flex, inline-flex, grid, inline-grid, none);
+@each $property in $display {
+  .u-#{$property} {
+    display: $property;
+  }
+}
+
+.u-desktop {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.u-mobile {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.u-i-desktop {
+  display: none;
+  @include mq(md) {
+    display: inline;
+  }
+}
+
+.u-i-mobile {
+  display: inline;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.u-desktop-important {
+  display: none!important;
+  @include mq(md) {
+    display: block!important;
+  }
+}
+
+.u-mobile-important {
+  display: block!important;
+  @include mq(md) {
+    display: none!important;
+  }
+}

@@ -1,0 +1,86 @@
+@use 'foundation' as *;
+
+.p-sub-page-nav {
+    margin-top: prem(10);
+    padding-left: prem(10);
+    padding-right: prem(10);
+}
+
+.p-sub-page-nav__lists {
+    @include mq(md) {
+        margin-top: prem(30);
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: prem(21);
+        row-gap: prem(20);
+    }
+}
+
+.p-sub-page-nav__list {
+    background-color: $c-white;
+    border-bottom: prem(1) solid #E3E3E3;
+    @include mq(md) {
+        background-color: $c-skyblue;
+        border-bottom:none;
+        border-radius: prem(5);
+    }
+    a {
+        padding: prem(13);
+        font-size: prem(16);
+        font-weight: $medium;
+        display: block;
+        text-align: center;
+        position: relative;
+        letter-spacing: 0.01em;
+        @include mq(md) {
+            padding-left: prem(45);
+            height: prem(80);
+            display: flex;
+            align-items: center;
+            font-size: prem(18);
+            text-align: left;
+        }
+        &::after {
+            content: '';
+            width:prem(15);
+            height: prem(15);
+            background-image: url(../images/icon/icon_arrow_right_blue.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: prem(15);
+            @include mq(md) {
+                right: initial;
+                left: prem(20);
+                border-radius: prem(5);
+            }
+        }
+    }
+
+    &.-orange {
+        @include mq(md) {
+            background-color: $c-light-pink;
+        }
+        a {
+            &::after {
+                background-image: url(../images/icon/icon_arrow_right_orange.png);
+            }
+        }
+    }
+
+}
+
+.wp-symptoms-title {
+    font-size: prem(18);
+    margin-top: prem(15);
+    color: $c-orange;
+    letter-spacing: 0.01em;
+    font-weight: $medium;
+    @include mq(md) {
+        margin-top: prem(30);
+        font-size: prem(24);
+        padding-left: prem(20);
+    }
+}

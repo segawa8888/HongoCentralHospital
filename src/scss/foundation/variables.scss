@@ -1,0 +1,58 @@
+@use "sass:math";
+
+// ブレイクポイントの設定
+// ＊＊＊＊＊SP・PCファーストについて、この設定を変更します＊＊＊＊＊
+$break-flg: 0 !default; //0:SPファースト、1：PCファースト
+
+$breakpoints: null;
+@if $break-flg == 0 {
+  $breakpoints: (
+    "sm": "screen and (min-width: 400px)",
+    "md": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 1000px)",
+    "xl": "screen and (min-width: 1200px)",
+  );
+} @else {
+  // ブレイクポイントの設定
+  $breakpoints: (
+    "sm": "screen and (max-width: 399px)",
+    "md": "screen and (max-width: 767px)",
+    "lg": "screen and (max-width: 999px)",
+    "xl": "screen and (max-width: 1199px)",
+  );
+}
+
+// inner
+$inner: 1200px;
+
+// 余白
+$padding-pc: 40px; // PC用余白設定
+$padding-sp: 10px; // スマホ用余白設定
+
+// フォント
+$font-base: "M PLUS Rounded 1c", sans-serif;
+$font-accent:"Zen Kaku Gothic New", sans-serif;
+$font-jp:"Noto Sans JP", sans-serif;
+
+$light:300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$ex-bold: 800;
+$black:900;
+
+// ベースフォントサイズ
+$base-font-size: 16px;
+
+// Color
+$c-white:#fff;
+$c-black:#333;
+$c-pink:#FFA594;
+$c-light-pink:#FEE3DE;
+$c-orange:#FF7C64;
+$c-gray:#D9D9D9;
+$c-light-gray:#F5F5F5;
+$c-deep-gray:#C9C9C9;
+$c-blue:#2989E2;
+$c-skyblue:#CFE8FF;
